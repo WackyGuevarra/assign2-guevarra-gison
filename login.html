@@ -11,15 +11,15 @@
             function onLogInBtnClck(){
                 const errorMsg = "INCOMPLETE LOGIN DETAILS";
                 var username = document.getElementById("txtUsername").value.trim();
-                let isUsernameEmpty = true;
+                var isUsernameEmpty = true;
                 if(username.length === 0){
                     var isUsernameEmpty = true;
+                    alert(errorMsg);
+                    errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
                 } else {
                     isUsernameEmpty = false;
                 }
                 console.log("isUsernameEmpty=", isUsernameEmpty);
-                alert(errorMsg);
-                errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
             }
             function onClearBtnClck(){
                 alert(document.getElementById("txtPassword").value);
